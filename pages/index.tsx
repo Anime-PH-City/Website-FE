@@ -1,12 +1,13 @@
+import PageLoader from "components/loader";
 import type { NextPage } from "next";
-import { homeStylesCss } from "../styles/pages/home";
+import dynamic from "next/dynamic";
+
+const HomeModule = dynamic(() => import("page-modules/home-module"), {
+  loading: () => <PageLoader />,
+});
 
 const Home: NextPage = () => {
-  return (
-    <div css={homeStylesCss}>
-      <h1 className="sam">Sammy</h1>
-    </div>
-  );
+  return <HomeModule />;
 };
 
 export default Home;
