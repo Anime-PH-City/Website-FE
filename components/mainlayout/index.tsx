@@ -8,7 +8,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <div className=" font-poppins min-h-[150vh] relative">
       <NavBar />
       {children}
-      <div className="absolute w-screen bottom-0 pb-36">
+      <div className="pb-36">
         <NewsLetter />
         <div className=" h-40"></div>
         <Footer />

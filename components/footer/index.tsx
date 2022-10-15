@@ -25,19 +25,23 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex text-white justify-between p-24">
+      <div className="flex text-white justify-end p-24 gap-x-10">
         <div className="space-y-3">
-          <h3 className="font-[600] text-4xl">Company</h3>
-          <p className=" text-[1.75rem] mon-hover">Home</p>
-          <p className=" text-[1.75rem] mon-hover">Events</p>
-          <p className=" text-[1.75rem] mon-hover">Blog</p>
-          <p className=" text-[1.75rem] mon-hover">About Us</p>
-          <p className=" text-[1.75rem] mon-hover">Community </p>
+          <h3 className="font-[600] text-3xl xl:text-4xl">Company</h3>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Home</p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Events</p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Blog</p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">About Us</p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
+            Community{" "}
+          </p>
         </div>
         <div className="space-y-3">
-          <h3 className="font-[600] text-4xl">Resources</h3>
-          <p className=" text-[1.75rem] mon-hover">Sponsors</p>
-          <p className=" text-[1.75rem] mon-hover">Help Center</p>
+          <h3 className="font-[600] text-3xl xl:text-4xl">Resources</h3>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Sponsors</p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
+            Help Center
+          </p>
         </div>
       </div>
     </footer>

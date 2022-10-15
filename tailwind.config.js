@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins"],
+        poppins: ["Poppins", "sans-serif"],
+        avenir: ["Avenir", "sans-serif"],
+        avenirLt: ["Avenir Next LT Pro", "sans-serif"],
       },
       colors: {
         "otaku-blue-1": "#00AEEF",
@@ -17,6 +19,9 @@ module.exports = {
         "otaku-gray-2": "#6F6F6F",
         "otaku-red-2": "#ED4424",
         "otaku-black-1": "#231F20",
+      },
+      backgroundImage: {
+        "otaku-home-hero": "url('/assets/imgs/hero.png')",
       },
     },
   },
