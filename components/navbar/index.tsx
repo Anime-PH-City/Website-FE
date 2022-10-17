@@ -15,7 +15,7 @@ const NavBar = () => {
         <p className="mon-hover">Community</p>
       </div>
 
-      <button className=" border-[3px] border-otaku-blue-1 text-otaku-red-1 font-bold text-[1.5rem] xl:text-[1.75rem] px-6 py-[15px] mon-hover">
+      <button className=" border-[3px] border-otaku-blue-1 text-otaku-red-1 font-bold text-[1.5rem] xl:text-[1.75rem] px-6 py-[15px] mon-hover-button">
         Sign Up
       </button>
     </StyledNav>

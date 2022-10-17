@@ -36,4 +36,7 @@ a {
   .mon-hover {
     @apply lg:hover:opacity-40 transition ease-in-out duration-200 cursor-pointer;
   }
+  .mon-hover-button {
+    @apply lg:hover:shadow-2xl transition ease-in-out duration-200 cursor-pointer;
+  }
 }
