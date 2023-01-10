@@ -3,6 +3,7 @@ import Image from 'next/image'
 import fadedNaruto from "../../public/assets/imgs/faded-naruto.png"
 import MainLayout from "components/mainlayout";
 import React from "react";
+import Events from "./Events"
 
 const Home = () => {
   return (
@@ -71,9 +72,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div>
-        
-      </div>
+      <Events />
     </MainLayout>
   );
 };
