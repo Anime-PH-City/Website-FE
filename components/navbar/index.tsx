@@ -5,7 +5,7 @@ import { StyledNav } from "./styles";
 
 const NavBar = () => {
   return (
-    <StyledNav className="flex justify-between items-center w-[84vw] left-[8vw] z-[1] py-6 px-10 absolute top-20 bg-white">
+    <StyledNav className="flex justify-between items-center w-[84vw] left-[8vw] z-[1] py-2 px-10 absolute top-10 bg-white ">
       <Image src={icon} alt={"icon"} />
 
       <div className=" flex w-max font-[600] text-xl  xl:text-2xl gap-x-8">
@@ -15,7 +15,7 @@ const NavBar = () => {
         <p className="mon-hover">Community</p>
       </div>
 
-      <button className=" border-[3px] border-otaku-blue-1 text-otaku-red-1 font-bold text-[1.5rem] xl:text-[1.75rem] px-6 py-[15px] mon-hover-button">
+      <button className=" border-[3px] border-otaku-blue-1 text-otaku-red-1 font-bold text-[1.5rem] xl:text-[1.75rem] px-6 py-[7px] mon-hover-button">
         Sign Up
       </button>
     </StyledNav>

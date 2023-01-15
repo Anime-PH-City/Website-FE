@@ -22,6 +22,8 @@ module.exports = {
       },
       backgroundImage: {
         "otaku-home-hero": "url('/assets/imgs/hero.png')",
+        "about-bg": "url('/assets/imgs/about-bg.png')",
+        "kakashi" : "url('/assets/imgs/kakashi-bg.png')",
       },
     },
   },
