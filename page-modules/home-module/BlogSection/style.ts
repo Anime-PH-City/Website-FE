@@ -1,15 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 77%;
+    width: 100%;
+    background-color: #ED4424;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    #caro {
-    width: 100%;
-    height: 40vh;
-    object-fit: "cover";
-  }
+    padding-block: 100px;
+    margin-bottom: 50px;
+    position: relative;
 `

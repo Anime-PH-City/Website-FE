@@ -4,6 +4,7 @@ import fadedNaruto from "../../public/assets/imgs/faded-naruto.png"
 import MainLayout from "components/mainlayout";
 import React from "react";
 import Events from "./Events"
+import BlogSection from "./BlogSection";
 
 const Home = () => {
   return (
@@ -66,13 +67,14 @@ const Home = () => {
             alt="faded naruto"
           />
           <div className="mt-[10%]">
-            <Button >
+            <Button color="primary" padding="big">
               Sign Up
             </Button>
           </div>
         </div>
       </div>
       <Events />
+      <BlogSection />
     </MainLayout>
   );
 };
