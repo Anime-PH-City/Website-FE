@@ -1,6 +1,7 @@
 import React from "react";
 import icon from "public/assets/svgs/icon.svg";
 import Image from "next/image";
+import Link from "next/link"
 import { StyledNav } from "./styles";
 
 const NavBar = () => {
@@ -9,10 +10,10 @@ const NavBar = () => {
       <Image src={icon} alt={"icon"} />
 
       <div className=" flex w-max font-[600] text-xl  xl:text-2xl gap-x-8">
-        <p className="mon-hover">Home</p>
-        <p className="mon-hover">Events</p>
-        <p className="mon-hover">Blog</p>
-        <p className="mon-hover">Community</p>
+        <Link href="/"><p className="mon-hover">Home</p></Link>
+        <Link href="/event"><p className="mon-hover">Events</p></Link>
+        <Link href="/blog"><p className="mon-hover">Blog</p></Link>
+        <Link href="/community"><p className="mon-hover">Community</p></Link>
       </div>
 
       <button className=" border-[3px] border-otaku-blue-1 text-otaku-red-1 font-bold text-[1.5rem] xl:text-[1.75rem] px-6 py-[7px] mon-hover-button">
