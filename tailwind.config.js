@@ -25,6 +25,7 @@ module.exports = {
         "about-bg": "url('/assets/imgs/about-bg.png')",
         "kakashi" : "url('/assets/imgs/kakashi-bg.png')",
         "otaku-blog-hero" : "url('/assets/imgs/blog-hero.png')",
+        "flier-event" : "url('/assets/imgs/flier.png')",
       },
     },
   },

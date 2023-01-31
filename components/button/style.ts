@@ -8,7 +8,7 @@ const COLOR = {
     `,
     secondary: css`
       color: #fff;
-      background: #ED1C24;
+      background: #ED4424;
     `,
     primary2 : css`
       color: #ED1C24;

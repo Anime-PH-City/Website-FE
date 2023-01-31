@@ -1,6 +1,5 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { Url } from "url";
 
 const Article = (props: {
   image: StaticImageData;
