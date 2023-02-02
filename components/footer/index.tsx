@@ -28,19 +28,23 @@ const Footer = () => {
       <div className="flex text-white justify-end p-24 gap-x-10">
         <div className="space-y-3">
           <h3 className="font-[600] text-3xl xl:text-4xl">Company</h3>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Home</p>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Events</p>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Blog</p>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">About Us</p>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Home</p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Events</p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Blog</p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">About Us</p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">
             Community{" "}
           </p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Update Profile</p>
         </div>
         <div className="space-y-3">
           <h3 className="font-[600] text-3xl xl:text-4xl">Resources</h3>
           <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">Sponsors</p>
           <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
             Help Center
+          </p>
+          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
+            Contact Us
           </p>
         </div>
       </div>

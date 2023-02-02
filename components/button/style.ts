@@ -22,6 +22,11 @@ const COLOR = {
         padding: 15px 55px;
         font-size: 22px;
     `,
+    long : css`
+        height: 60px;
+        padding: 15px 95px;
+        font-size: 22px;
+    `,
     small : css`
       padding: 10px 19px;
       font-size: 20px;
