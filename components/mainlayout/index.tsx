@@ -1,8 +1,8 @@
 import Footer from "components/footer";
 import NavBar from "components/navbar";
 import NewsLetter from "components/newsletter";
+import EventOverlay from "overlay_modules/event-module/EventOverlay";
 import React, {useState} from "react";
-import Overlay from "components/overlay";
 
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
@@ -14,7 +14,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div className=" font-poppins min-h-[150vh] relative">
-      <Overlay isOpen = {isOpen} onClose = {toggleOverlay} />
+      <EventOverlay isOpen = {isOpen} onClose = {toggleOverlay} header = "Events"/>
       <NavBar showOverLay = {toggleOverlay} />
       {children}
       <div className="pb-36">

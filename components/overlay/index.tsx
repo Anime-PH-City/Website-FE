@@ -1,32 +1,35 @@
+import styled from "@emotion/styled";
 import React from "react";
-import { OverLayBackGround } from "./style";
+import {OverLayBackGround, OverLayChildren, OverLayContainer, OverLayControls} from './style'
 
 export type OverLayProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
   children?: React.ReactNode; // make the component able to receive children elements
   isOpen: boolean; //value to set Overlay visibility
   onClose: () => void;
+  header: string;
 };
 
-const Overlay = ({ isOpen, onClose }: OverLayProps) => {
+
+const Overlay = ({ isOpen, onClose, header, children }: OverLayProps) => {
   return (
     <>
       {isOpen && (
+        <>
         <OverLayBackGround>
-          <div className="overlay__background">
-            <div className="overlay__container">
-              <div className="overlay__controls">
-                <h1>OverLay Title</h1>
-                <button
-                  className="overlay__close"
-                  type="button"
-                  onClick={onClose}
-                ></button>
-              </div>
-              <div className="overlay__children"></div>
-            </div>
-          </div>
+          <OverLayContainer>
+            <OverLayControls>
+              <h1 className="text-2xl font-bold">{header}</h1>
+              <button
+                className="bg-transparent border-none text-4xl cursor-pointer  after:content-['\00d7'] after:inline-block "
+                onClick={onClose}
+              >
+              </button>
+            </OverLayControls>
+            <OverLayChildren>{children}</OverLayChildren>
+          </OverLayContainer>
         </OverLayBackGround>
+        </>
       )}
     </>
   );

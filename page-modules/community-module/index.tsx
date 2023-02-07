@@ -8,7 +8,7 @@ import Members from "./Members";
 const Community = () => {
   return (
     <MainLayout>
-      <div className="h-[150px]"></div>
+    <div className="h-[150px]"></div>
       <div className="mt-6  w-[70%] mx-auto ">
         <div className="relative">
           <div className="w-[100%] text-center">

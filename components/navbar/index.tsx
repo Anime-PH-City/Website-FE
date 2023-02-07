@@ -16,8 +16,8 @@ const NavBar = ({showOverLay}:NavProps) => {
 
       <div className=" flex w-max font-[600] text-xl  xl:text-2xl gap-x-8">
         <Link href="/"><p className="mon-hover">Home</p></Link>
-        <Link href="/event"><p className="mon-hover">Events</p></Link>
-        {/* <p className="mon-hover" onClick={showOverLay}>Events</p> */}
+        {/* <Link href="/event"><p className="mon-hover">Events</p></Link> */}
+        <p className="mon-hover" onClick={showOverLay}>Events</p>
         <Link href="/blog"><p className="mon-hover">Blog</p></Link>
         <Link href="/community"><p className="mon-hover">Community</p></Link>
       </div>

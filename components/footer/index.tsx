@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import icon_white from "public/assets/svgs/icon-white.svg";
 
 import whatsapp from "public/assets/svgs/whatsapp.svg";
@@ -43,9 +44,11 @@ const Footer = () => {
           <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
             Help Center
           </p>
-          <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
+          <Link href={"./contact"}>
+            <p className="text-[1.5rem] xl:text-[1.75rem] mon-hover">
             Contact Us
-          </p>
+            </p>
+          </Link>
         </div>
       </div>
     </footer>
