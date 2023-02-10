@@ -1,11 +1,19 @@
 import Button from "components/button";
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import img from "../../../public/assets/imgs/blog-section-image.png";
 import { Container } from "./style";
+import Payment from "modal/payment-module";
 
 const BlogSection = () => {
+  const [ isPaymentOpen, setIsPaymentOpen ] = useState(false)
+
+  const togglePaymentOverlay = () => {
+      setIsPaymentOpen(!isPaymentOpen)
+  }
   return (
+    <>
+    <Payment isOpen = {isPaymentOpen} onClose = {togglePaymentOverlay} header = "Dona tion"/>
     <Container>
       <div className="absolute top-[18%] left-[10%] z-50 w-[35%]">
         <Image src={img} alt="background-photo" />
@@ -19,7 +27,7 @@ const BlogSection = () => {
           odio.
         </p>
         <div className="w-[100%] flex justify-end mt-11">
-          <Button color="primary" padding="big">
+          <Button color="primary" padding="big" onClick={togglePaymentOverlay}>
             Donate
           </Button>
         </div>
@@ -62,6 +70,7 @@ const BlogSection = () => {
         </div>
       </div>
     </Container>
+    </>
   );
 };
 

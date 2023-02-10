@@ -1,19 +1,26 @@
-import Overlay from 'components/overlay'
+import Overlay from '../overlay'
 import flier from "../../public/assets/imgs/flier.png";
 import nerdwork from "../../public/assets/imgs/nerdwork.png"
 import Image from 'next/image'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import EventCard from 'page-modules/home-module/Events/EventCard';
 
-const EventOverlay = ({isOpen, onClose, header}: {
+const EventOverlay = ({isOpen, onClose, header, futureEvents}: {
     isOpen : boolean
     onClose : () => void
     header: string
+    futureEvents: boolean
 }) => {
-  const [showFutureEvents, setShowFutureEvents] = useState(true)
+  const [showFutureEvents, setShowFutureEvents] = useState(futureEvents)
+
+  useEffect(() => {
+    setShowFutureEvents(futureEvents)
+  },[futureEvents])
+  
   const handleClick = () => {
     setShowFutureEvents(!showFutureEvents)
   }
+  
   return (
     <Overlay isOpen = {isOpen} onClose = {onClose} header = {header}>
         <div className='w-[100%] flex justify-end text-otaku-blue-1 font-bold' 

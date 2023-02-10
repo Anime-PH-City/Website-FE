@@ -8,7 +8,6 @@ export const OverLayBackGround = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  cursor: pointer;
   z-index: 90;
 `;
 
@@ -16,7 +15,7 @@ export const OverLayBackGround = styled.div`
 export const OverLayContainer = styled.div`
     background-color: white;
     border-radius: 15px;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -26,6 +25,7 @@ export const OverLayContainer = styled.div`
     width: 80vw;
     height: 96vh;
     overflow-y: scroll;
+    cursor: pointer;
 `
 export const OverLayControls = styled.div`
     display: flex;
@@ -50,7 +50,7 @@ export const OverLayChildren = styled.div`
     width: 90%;
     margin: auto;
     margin-top: 90px;
-    z-index: 140;
+    z-index: 110;
 `
 // .overlay__close:after {
 //   display: inline-block;

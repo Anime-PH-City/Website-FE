@@ -9,7 +9,11 @@ import twitter from "public/assets/svgs/twitter.svg";
 import slack from "public/assets/svgs/slack.svg";
 import discord from "public/assets/svgs/discord.svg";
 
-const Footer = () => {
+export type FooterProps = {
+  showEventOverLay : () => void
+}
+
+const Footer = ({showEventOverLay}:FooterProps) => {
   return (
     <footer className=" bg-otaku-black-1 w-[76vw] rounded-[71px] mx-auto grid grid-cols-[40%60%]">
       <div className=" col-span-1 flex h-full pl-24">
@@ -30,7 +34,7 @@ const Footer = () => {
         <div className="space-y-3">
           <h3 className="font-[600] text-3xl xl:text-4xl">Company</h3>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Home</p>
-          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Events</p>
+          <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover" onClick={showEventOverLay}>Events</p>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Blog</p>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">About Us</p>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">

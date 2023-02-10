@@ -1,6 +1,7 @@
-import styled from "@emotion/styled";
 import React from "react";
 import {OverLayBackGround, OverLayChildren, OverLayContainer, OverLayControls} from './style'
+import back from '../../public/assets/svgs/icons8-close.svg'
+import Image from 'next/image'
 
 export type OverLayProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
@@ -19,11 +20,18 @@ const Overlay = ({ isOpen, onClose, header, children }: OverLayProps) => {
         <OverLayBackGround>
           <OverLayContainer>
             <OverLayControls>
-              <h1 className="text-2xl font-bold">{header}</h1>
+              <h1 className="text-3xl font-bold">
+                {header.split(' ')[0]} 
+                <span className="text-otaku-red-1">
+                  {`${header.split(" ")[1] ? header.split(" ")[1] : "" }`}
+                  {` ${header.split(" ")[2] || "" }`}
+                </span>
+              </h1>
               <button
-                className="bg-transparent border-none text-4xl cursor-pointer  after:content-['\00d7'] after:inline-block "
+                className="bg-transparent border-none text-lg cursor-pointer text-otaku-red-1  font-bold after:inline-block "
                 onClick={onClose}
               >
+                <Image src={back}  alt = "back"/>
               </button>
             </OverLayControls>
             <OverLayChildren>{children}</OverLayChildren>
