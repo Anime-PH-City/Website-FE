@@ -1,3 +1,4 @@
+/// <reference types="@emotion/react/types/css-prop" />
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 
