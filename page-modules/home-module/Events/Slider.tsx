@@ -78,6 +78,25 @@ const withExternalControls = (props: any) => {
             showThumbs={false}
             showArrows = {false}
             showStatus={false}
+            renderIndicator={(onClickHandler, isSelected, index, label) => {
+              const defStyle = { marginLeft: 20, marginTop: 40, display: "inline-flex", backgroundColor: "#EDEDED", cursor: "pointer", padding: "1%", borderRadius: "50%", zIndex: "99" };
+              const style = isSelected
+                ? { ...defStyle, backgroundColor: "#00AEEF" }
+                : { ...defStyle };
+              return (
+                <div
+                  style={style}
+                  onClick={onClickHandler}
+                  onKeyDown={onClickHandler}
+                  data-value={index}
+                  key={index}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`${label} ${index + 1}`}
+                >
+                </div>
+              );
+            }}
             {...this.props}
           >
             {props.children}
