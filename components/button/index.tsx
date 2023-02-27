@@ -4,7 +4,7 @@ import { Container } from "./style";
 export type ButtonProps = {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; // to handle onClick functions
     children?: React.ReactNode; // make the component able to receive children elements
-    color?: "primary" | "secondary" | "primary2"; // three styling options
+    color?: "primary" | "secondary" | "primary2" | "secondary2"; // three styling options
     padding?: "big" | "small" | "long"; //two sizes
 };
 

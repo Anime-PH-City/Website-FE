@@ -4,19 +4,30 @@ import Image from "next/image";
 import img from "../../../public/assets/imgs/blog-section-image.png";
 import { Container } from "./style";
 import Payment from "components/modal/payment-module";
+import BlogPost from "components/modal/blogpost-module";
 
 const BlogSection = () => {
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  const [isBlogPostOpen, setIsBlogPostOpen] = useState(false)
 
   const togglePaymentOverlay = () => {
     setIsPaymentOpen(!isPaymentOpen);
   };
+
+  const toggleBlogPostOverlay = () => {
+    setIsBlogPostOpen(!isBlogPostOpen);
+  }
   return (
     <>
       <Payment
         isOpen={isPaymentOpen}
         onClose={togglePaymentOverlay}
         header="Dona tion"
+      />
+      <BlogPost 
+        isOpen={isBlogPostOpen}
+        onClose={toggleBlogPostOverlay}
+        header=""
       />
       <Container>
         <div className="absolute top-[18%] left-[10%] z-50 w-[35%]">
@@ -55,7 +66,7 @@ const BlogSection = () => {
                   serise and movies the thought to be discontinued Bleach anime
                   is said to make a return along with others{" "}
                 </p>
-                <span className="flex items-center">
+                <span className="flex items-center cursor-pointer" onClick={toggleBlogPostOverlay}>
                   <h1 className="font-bold text-3xl mr-[2%]">Read More</h1>
                   {`>>>`}
                 </span>
@@ -73,7 +84,7 @@ const BlogSection = () => {
                   serise and movies the thought to be discontinued Bleach anime
                   is said to make a return along with others{" "}
                 </p>
-                <span className="flex items-center">
+                <span className="flex items-center cursor-pointer" onClick={toggleBlogPostOverlay}>
                   <h1 className="font-bold text-3xl mr-[2%]">Read More</h1>
                   {`>>>`}
                 </span>

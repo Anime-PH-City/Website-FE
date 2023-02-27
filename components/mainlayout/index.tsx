@@ -4,10 +4,17 @@ import NewsLetter from "components/newsletter";
 import EventOverlay from "components/modal/event-module/EventOverlay";
 import Profile from "components/modal/profile-module";
 import React, { useState } from "react";
+import UpdateProfile from "components/modal/update-profile-module";
+import ConfirmEmail from "components/modal/update-profile-module/confirmEmail";
+
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isEventOpen, setIsEventOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isUpdateProfileOpen, setIsUpdateProfileOpen] = useState(false);
+  const [isConfirmEmailOpen, setIsConfirmEmailOpen] = useState(false);
+
+
 
   const toggleEventModal = () => {
     setIsEventOpen(!isEventOpen);
@@ -15,6 +22,14 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
 
   const toggleProfileModal = () => {
     setIsProfileOpen(!isProfileOpen);
+  };
+
+  const toggleUpdateProfileModal = () => {
+    setIsUpdateProfileOpen(!isUpdateProfileOpen);
+  };
+
+  const toggleConfirmEmailModal = () => {
+    setIsConfirmEmailOpen(!isConfirmEmailOpen);
   };
 
   return (
@@ -30,6 +45,16 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         onClose={toggleProfileModal}
         header="Profile  Information"
       />
+      <UpdateProfile
+        isOpen={isUpdateProfileOpen}
+        onClose={toggleUpdateProfileModal}
+        header="Update  Profile"
+      />
+      <ConfirmEmail 
+        isOpen={isConfirmEmailOpen}
+        onClose={toggleConfirmEmailModal}
+        header="Update  Profile"
+      />
       <NavBar
         showEventModal={toggleEventModal}
         showProfileModal={toggleProfileModal}
@@ -38,7 +63,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="pb-36">
         <NewsLetter />
         <div className=" h-40"></div>
-        <Footer showEventOverLay={toggleEventModal} />
+        <Footer showEventOverLay={toggleEventModal} showUpdateProfileModal = {toggleUpdateProfileModal} showConfirmEmailModal = {toggleConfirmEmailModal}/>
       </div>
     </div>
   );

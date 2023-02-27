@@ -13,6 +13,10 @@ const COLOR = {
     primary2 : css`
       color: #ED1C24;
       background: #00AEEF;
+    `,
+    secondary2 : css`
+      color: #fff;
+      background: #ED1C24;
     `
   };
 
