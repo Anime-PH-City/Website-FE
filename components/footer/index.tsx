@@ -35,7 +35,7 @@ const Footer = ({showEventOverLay, showUpdateProfileModal, showConfirmEmailModal
       <div className="flex text-white justify-end p-24 gap-x-10">
         <div className="space-y-3">
           <h3 className="font-[600] text-3xl xl:text-4xl">Company</h3>
-          <Link href={"./cart"}>
+          <Link href={"./"}>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover">Home</p>
           </Link>
           <p className="text-[1.4rem] xl:text-[1.75rem] mon-hover" onClick={showEventOverLay}>Events</p>
