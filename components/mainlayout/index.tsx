@@ -5,7 +5,7 @@ import EventOverlay from "components/modal/event-module/EventOverlay";
 import Profile from "components/modal/profile-module";
 import React, { useState } from "react";
 import UpdateProfile from "components/modal/update-profile-module";
-import ConfirmEmail from "components/modal/update-profile-module/confirmEmail";
+import ConfirmEmail from "components/modal/otpModal";
 
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
@@ -54,6 +54,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         isOpen={isConfirmEmailOpen}
         onClose={toggleConfirmEmailModal}
         header="Update  Profile"
+        source="email address"
       />
       <NavBar
         showEventModal={toggleEventModal}

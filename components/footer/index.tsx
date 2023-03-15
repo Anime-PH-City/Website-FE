@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import icon_white from "public/assets/svgs/icon-white.svg";
-
 import whatsapp from "public/assets/svgs/whatsapp.svg";
 import instagram from "public/assets/svgs/instagram.svg";
 import twitter from "public/assets/svgs/twitter.svg";

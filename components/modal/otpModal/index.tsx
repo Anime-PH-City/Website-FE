@@ -1,15 +1,19 @@
 import React, { useState, useRef } from "react";
-import MiniOverlay from "../../mini-overlay";
+import MiniOverlay from "../mini-overlay";
 import Button from "components/button";
 
-const ConfirmEmail = ({
+const OTPModal = ({
   isOpen,
   onClose,
   header,
+  source,
+  reason
 }: {
   isOpen: boolean;
   onClose: () => void;
   header: string;
+  source: string
+  reason?: string
 }) => {
     const PIN_LENGTH = 6 ;
     const [pin, setPin] = useState<Array < number | undefined >>(new Array (PIN_LENGTH))
@@ -24,7 +28,7 @@ const ConfirmEmail = ({
     <MiniOverlay isOpen={isOpen} onClose={onClose} header={header}>
       <div className="w-[90%] mx-auto flex flex-col items-center">
         <p className="[word-spacing:4px] tracking-wide font-semibold">
-          Please enter six digit pin sent to your email address
+          Please enter six digit pin sent to your {source}
         </p>
         <form
             onSubmit={(event) => {
@@ -43,7 +47,7 @@ const ConfirmEmail = ({
             
           </div>
           <div className="flex w-[100%] flex-col items-center mt-8 ">
-            <p className="mb-5 text-[15px]">Enter pin to verify email</p>
+            <p className="mb-5 text-[15px]">Enter pin to verify {reason || "email"}</p>
             <Button padding="small" color="primary">
               Confirm
             </Button>
@@ -54,7 +58,7 @@ const ConfirmEmail = ({
   );
 };
 
-export default ConfirmEmail;
+export default OTPModal;
 
 interface PinInputGridProps {
     pin: Array<number | undefined>;
