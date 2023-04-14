@@ -4,18 +4,91 @@ import Image from "next/image";
 import img from "../../../public/assets/imgs/blog-section-image.png";
 import { Container } from "./style";
 import Payment from "components/modal/payment-module";
+import BlogPost from "components/modal/blogpost-module";
+import PayMethod from "components/modal/payment-module/pay-method";
+import CardMethod from "components/modal/payment-module/card-payment";
+import OTPModal from "components/modal/otpModal";
+import SuccessModal from "components/modal/payment-module/success-modal";
+import Transfer from "components/modal/payment-module/transfer-payment";
 
 const BlogSection = () => {
   const [isPaymentOpen, setIsPaymentOpen] = useState(false);
+  const [isBlogPostOpen, setIsBlogPostOpen] = useState(false)
+  const [isPayMethodOpen, setIsPayMethodOpen] = useState(false)
+  const [isCardMethodOpen, setIsCardMethodOpen] = useState(false)
+  const [isTransferMethodOpen, setIsTransferMethodOpen] = useState(false)
+  const [isOTPModalOpen, setIsOTPModalOpen] = useState(false)
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false)
+
 
   const togglePaymentOverlay = () => {
     setIsPaymentOpen(!isPaymentOpen);
   };
+
+  const toggleBlogPostOverlay = () => {
+    setIsBlogPostOpen(!isBlogPostOpen);
+  }
+
+  const togglePayMethodOverlay = () => {
+    setIsPayMethodOpen(!isPayMethodOpen);
+  }
+
+  const toggleCardMethodOverlay = () => {
+    setIsCardMethodOpen(!isCardMethodOpen);
+  }
+
+  const toggleTransferMethodOverlay = () => {
+    setIsTransferMethodOpen(!isTransferMethodOpen);
+  }
+
+  const toggleOTPModalOverlay = () => {
+    setIsOTPModalOpen(!isOTPModalOpen);
+  }
+
+  const toggleSuccessModalOverlay = () => {
+    setIsSuccessModalOpen(!isSuccessModalOpen);
+  }
+
+
   return (
     <>
       <Payment
         isOpen={isPaymentOpen}
         onClose={togglePaymentOverlay}
+        header="Dona tion"
+      />
+      <PayMethod 
+        isOpen={isPayMethodOpen}
+        onClose={togglePayMethodOverlay}
+        header="Dona tion"
+        cardOpen={toggleCardMethodOverlay}
+        transferOpen = {toggleTransferMethodOverlay}
+      />
+      <CardMethod 
+        isOpen={isCardMethodOpen}
+        onClose={toggleCardMethodOverlay}
+        header="Dona tion"
+      />
+      <Transfer 
+        isOpen={isTransferMethodOpen}
+        onClose={toggleTransferMethodOverlay}
+        header="Dona tion"
+      />
+      <BlogPost 
+        isOpen={isBlogPostOpen}
+        onClose={toggleBlogPostOverlay}
+        header=""
+      />
+      <OTPModal 
+        isOpen={isOTPModalOpen}
+        onClose={toggleOTPModalOverlay}
+        header="Dona tion"
+        source = "phone number"
+        reason = "payment"
+      />
+      <SuccessModal 
+        isOpen={isSuccessModalOpen}
+        onClose={toggleSuccessModalOverlay}
         header="Dona tion"
       />
       <Container>
@@ -55,7 +128,7 @@ const BlogSection = () => {
                   serise and movies the thought to be discontinued Bleach anime
                   is said to make a return along with others{" "}
                 </p>
-                <span className="flex items-center">
+                <span className="flex items-center cursor-pointer" onClick={toggleBlogPostOverlay}>
                   <h1 className="font-bold text-3xl mr-[2%]">Read More</h1>
                   {`>>>`}
                 </span>
@@ -73,7 +146,7 @@ const BlogSection = () => {
                   serise and movies the thought to be discontinued Bleach anime
                   is said to make a return along with others{" "}
                 </p>
-                <span className="flex items-center">
+                <span className="flex items-center cursor-pointer" onClick={toggleBlogPostOverlay}>
                   <h1 className="font-bold text-3xl mr-[2%]">Read More</h1>
                   {`>>>`}
                 </span>

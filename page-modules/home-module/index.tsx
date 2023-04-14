@@ -2,13 +2,26 @@ import Button from "../../components/button"
 import Image from 'next/image'
 import fadedNaruto from "../../public/assets/imgs/faded-naruto.png"
 import MainLayout from "components/mainlayout";
-import React from "react";
+import React, {useState} from "react";
 import Events from "./Events"
 import BlogSection from "./BlogSection";
+import Profile from "components/modal/profile-module";
+
 
 const Home = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const toggleProfileModal = () => {
+    setIsProfileOpen(!isProfileOpen);
+  };
+
   return (
     <MainLayout>
+      <Profile
+        isOpen={isProfileOpen}
+        onClose={toggleProfileModal}
+        header="Profile  Information"
+      />
       <div className="h-[100vh] bg-otaku-home-hero bg-cover bg-no-repeat flex items-center justify-center">
         <div className="text-center w-[80vw]">
           <h1 className="text-6xl lg:text-7xl xl:text-8xl font-[750] text-white font-avenir">
@@ -18,7 +31,9 @@ const Home = () => {
             A community for Otakus/Weebs In Port Harcourt to connect and meet
             each other
           </h3>
-          <button className=" rounded-[20px] font-bold text-2xl bg-white mt-5 py-5 px-24 mon-hover">
+          <button 
+            className=" rounded-[20px] font-bold text-2xl bg-white mt-5 py-5 px-24 mon-hover"
+            onClick={toggleProfileModal}>
             Join Us
           </button>
         </div>
@@ -67,7 +82,7 @@ const Home = () => {
             alt="faded naruto"
           />
           <div className="mt-[10%]">
-            <Button color="primary" padding="big">
+            <Button color="primary" padding="big" onClick={toggleProfileModal}>
               Sign Up
             </Button>
           </div>

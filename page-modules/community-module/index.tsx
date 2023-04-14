@@ -1,13 +1,26 @@
 import MainLayout from "components/mainlayout";
-import React from "react";
+import React, {useState} from "react";
 import Image from "next/image";
 import shinra from "../../public/assets/imgs/shinra.png";
 import Button from "components/button";
 import Members from "./Members";
+import Profile from "components/modal/profile-module";
+
 
 const Community = () => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const toggleProfileModal = () => {
+    setIsProfileOpen(!isProfileOpen);
+  };
+
   return (
     <MainLayout>
+      <Profile
+        isOpen={isProfileOpen}
+        onClose={toggleProfileModal}
+        header="Profile  Information"
+      />
     <div className="h-[150px]"></div>
       <div className="mt-6  w-[70%] mx-auto ">
         <div className="relative">
@@ -32,7 +45,7 @@ const Community = () => {
               egestas odio.
             </p>
             <div className="w-[100%] flex justify-end mt-14">
-              <Button color="primary" padding="long">
+              <Button color="primary" padding="long" onClick={toggleProfileModal}>
                 Join
               </Button>
             </div>
